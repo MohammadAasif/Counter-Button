@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step Counter</title>
+    <style>
+        @media only screen and (max-width: 650px) {
+            .m1 {
+                margin-top: 6em;
+                background-color: lemonchiffon;
+            }
+
+            .m2 {
+                background-color: lemonchiffon;
+            }
+            #Decrement {
+                width: 2em;
+                height: 2em;
+            }
+
+            #increment {
+                width: 2em;
+                height: 2em;
+            }
+
+            #reset {
+                width: 4em;
+                height: 2em;
+            }
+
+            #quantity {
+                height: 3em;
+            }
+
+
+
+        }
+
+        @media only screen and (min-width: 700px) {
+
+
+
+            .m1 {
+                margin-top: 10em;
+                background-color: lemonchiffon;
+            }
+
+            .m2 {
+                background-color: lemonchiffon;
+            }
+            #Decrement {
+                width: 3em;
+                height: 3em;
+            }
+            #increment {
+                width: 3em;
+                height: 3em;
+            }
+            #reset {
+                width: 5em;
+                height: 2em;
+            }
+            #quantity {
+                height: 3em;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body style="background-color:violet">
+    <center>
+    <div class="m1" >
+        <button id="Decrement">-</button>
+        <input type="text" id="quantity" value="0">
+        <button id="increment">+</button>
+    </div>
+    <div class="m2">
+        <button id="reset">Reset</button>
+
+    </div>
+        </center>
+    <script type="text/javascript">
+      
+        let btnInc = document.querySelector('#increment');
+        let btnDec = document.querySelector('#Decrement');
+        let btnreset = document.querySelector('#reset');
+        let display = document.querySelector('#quantity');
+
+        btnInc.addEventListener('click', () => {
+            display.value = parseInt(display.value) + 1;
+        });
+
+        btnDec.addEventListener('click', () => {
+            if (display.value <= 0) {
+                display.value = 0;
+            } else {
+                display.value = parseInt(display.value) - 1;
+            }
+            
+        });
+
+        btnreset.addEventListener('click', () => {
+            display.value = 0;
+            res
+        });
+
+    </script>
+
+</body>
+</html>
